@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   components: [
     {
-      path: "~/components",
+      path: "~/app/components",
       pathPrefix: false,
       prefix: "U",
     },
