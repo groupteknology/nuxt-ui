@@ -11,6 +11,7 @@
         "preview": "nuxt preview"
     },
     "dependencies": {
+        "@mdi/js": "^7.4.47",
         "@tailwindcss/vite": "^4.2.2",
         "nuxt": "^4.4.2",
         "tailwindcss": "^4.2.2",

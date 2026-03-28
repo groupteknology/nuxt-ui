@@ -1,4 +1,6 @@
 <script setup lang="ts">
+    import { mdiCheck, mdiChevronDown } from '@mdi/js'
+
     interface SelectOption {
         label: string
         value: string
@@ -190,12 +192,13 @@
         <template #trigger="{ open: isOpen }">
             <div class="flex w-full items-center justify-between gap-3">
                 <span class="pointer-events-none truncate">{{ triggerLabel }}</span>
-                <span
+                <UIcon
                     aria-hidden="true"
-                    class="pointer-events-none text-xs"
-                >
-                    {{ isOpen ? '▲' : '▼' }}
-                </span>
+                    class="pointer-events-none transition-transform"
+                    :class="{ 'rotate-180': isOpen }"
+                    :path="mdiChevronDown"
+                    :size="16"
+                />
             </div>
         </template>
 
@@ -222,7 +225,12 @@
                         @keydown.tab="onOptionTab($event, index, triggerEl)"
                     >
                         <span class="truncate">{{ option.label }}</span>
-                        <span v-if="isSelected(option.value)">✓</span>
+                        <UIcon
+                            v-if="isSelected(option.value)"
+                            aria-hidden="true"
+                            :path="mdiCheck"
+                            :size="16"
+                        />
                     </button>
                 </div>
 
