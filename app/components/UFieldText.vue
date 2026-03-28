@@ -1,13 +1,17 @@
 <script setup lang="ts">
-interface Props {
-  name?: string;
-}
+    interface Props {
+        name?: string
+        placeholder?: string
+    }
 
-const props = withDefaults(defineProps<Props>(), {
-  name: "Default",
-});
+    const props = defineProps<Props>()
 </script>
 
 <template>
-  <div>FieldText: {{ props.name }}</div>
+    <div>
+        <input
+            :placeholder="props.placeholder"
+            type="text"
+        />
+    </div>
 </template>

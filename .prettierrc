@@ -1,0 +1,12 @@
+{
+    "endOfLine": "auto",
+    "plugins": ["prettier-plugin-packagejson", "prettier-plugin-sort-json", "prettier-plugin-css-order", "prettier-plugin-tailwindcss"],
+    "printWidth": 400,
+    "semi": false,
+    "singleAttributePerLine": true,
+    "singleQuote": true,
+    "tabWidth": 4,
+    "tailwindAttributes": ["ui"],
+    "tailwindStylesheet": "./app/assets/css/main.css",
+    "vueIndentScriptAndStyle": true
+}
